@@ -15,7 +15,7 @@ namespace ProjectPSD.Repository
             // Jika belum ada instance maka buatlah sebuah instance baru
             if (instance == null)
             {
-                instance = new ProjectDatabaseEntities3;
+                instance = new ProjectDatabaseEntities3();
             }
 
             // Jika sudah ada
