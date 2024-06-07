@@ -112,20 +112,29 @@
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+
     <Content Include="Views\Customer\OrderSupplement.aspx" />
     <Content Include="Views\Guest\Login.aspx" />
     <Content Include="Views\Guest\Register.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+
     <Compile Include="Controller\SupplementController.cs" />
     <Compile Include="Factory\AdminFactory.cs" />
+
+    <Compile Include="Controller\AuthController.cs" />
+    <Compile Include="Factory\UserFactory.cs" />
+
     <Compile Include="Factory\CartFactory.cs" />
     <Compile Include="Factory\DetailFactory.cs" />
     <Compile Include="Factory\HeaderFactory.cs" />
     <Compile Include="Factory\MsSupplementFactory.cs" />
     <Compile Include="Factory\SupplementTypeFactory.cs" />
+
     <Compile Include="Handler\SupplementHandler.cs" />
+    <Compile Include="Handler\AuthHandler.cs" />
+
     <Compile Include="Models\Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -187,6 +196,22 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap.rtl.min.css.map" />
+    <Content Include="Content\bootstrap.rtl.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.css.map" />
+    <Content Include="Content\bootstrap-utilities.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
     <EntityDeploy Include="Models\Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
