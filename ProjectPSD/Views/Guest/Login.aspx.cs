@@ -1,6 +1,7 @@
 ﻿using ProjectPSD.Controller;
 using ProjectPSD.Handler;
 using ProjectPSD.Models;
+using ProjectPSD.Views.Customer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -46,7 +47,7 @@ namespace ProjectPSD.Views
                         Response.Cookies.Add(cookie);
                     }
 
-                    Response.Write("Login Succesful!");
+                    Response.Redirect("../Customer/CustomerProfile.aspx");
                 }
             }
             else
