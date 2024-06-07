@@ -39,6 +39,7 @@
           <ScalarProperty Name="UserDOB" ColumnName="UserDOB" />
           <ScalarProperty Name="UserGender" ColumnName="UserGender" />
           <ScalarProperty Name="UserRole" ColumnName="UserRole" />
+          <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

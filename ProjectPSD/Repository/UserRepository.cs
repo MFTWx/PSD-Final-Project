@@ -26,5 +26,23 @@ namespace ProjectPSD.Repository
                     where user.UserName.Equals(name) && user.UserPassword.Equals(password)
                     select user).FirstOrDefault();
         }
+
+        public static string getPassword(string id)
+        {
+            string password = (from user in db.MsUsers
+                               where user.UserID.ToString().Equals(id)
+                               select user.UserPassword).FirstOrDefault();
+            return password;
+        }
+
+        public static MsUser updatePassword(string id, string newPassword)
+        {
+            MsUser user = (from u in db.MsUsers
+                           where u.UserID.ToString().Equals(id)
+                           select u).FirstOrDefault();
+            user.UserPassword = newPassword;
+            db.SaveChanges();
+            return user;
+        }
     }
 }

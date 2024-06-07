@@ -24,7 +24,7 @@
       <PropertyRef Name="SupplementTypeID" />
     </Key>
     <Property Name="SupplementTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="SupplementTypeName" Type="int" Nullable="false" />
+    <Property Name="SupplementTypeName" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityType Name="MsUser">
     <Key>
@@ -36,9 +36,10 @@
     <Property Name="UserDOB" Type="date" Nullable="false" />
     <Property Name="UserGender" Type="varchar" MaxLength="10" Nullable="false" />
     <Property Name="UserRole" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="UserPassword" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <!--Errors Found During Generation:
-warning 6002: The table/view 'D:\PROJECTPSD\PROJECTPSD\APP_DATA\PROJECTDATABASE.MDF.dbo.TransactionDetail' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view '9075C83F7235FB0798C3BEF009AB6A5B_TTERN SOFTWARE DESIGN LAB\FINAL-PROJECT\FINAPROJECT-PSD\PROJECTPSD\APP_DATA\PROJECTDATABASE.MDF.dbo.TransactionDetail' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="TransactionDetail">
     <Key>
       <PropertyRef Name="TransactionID" />

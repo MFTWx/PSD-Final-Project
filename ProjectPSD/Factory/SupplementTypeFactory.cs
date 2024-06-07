@@ -8,7 +8,7 @@ namespace ProjectPSD.Factory
 {
     public class SupplementTypeFactory
     {
-        public static MsSupplementType create(int SupplementTypeName)
+        public static MsSupplementType create(string SupplementTypeName)
         {
             return new MsSupplementType()
             {

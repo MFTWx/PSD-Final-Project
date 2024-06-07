@@ -19,7 +19,7 @@
             <div class="col-md-6">
               <div class="card">
                 <div class="card-body p-4">
-                  <h2 class="text-uppercase text-center mb-4">Log into account</h2>
+                  <h2 class="text-uppercase text-center mb-4">Log into an account</h2>
 
                   <form runat="server">
                     <div class="mb-3">

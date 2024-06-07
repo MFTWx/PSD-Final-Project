@@ -36,5 +36,17 @@ namespace ProjectPSD.Handler
             return user;
 
         }
+
+        public static string getPassword(string id)
+        {
+            string password = UserRepository.getPassword(id);
+            return password;
+            
+        }
+
+        public static void doPasswordReset(string id, string newPassword)
+        {
+            UserRepository.updatePassword(id, newPassword);
+        }
     }
 }

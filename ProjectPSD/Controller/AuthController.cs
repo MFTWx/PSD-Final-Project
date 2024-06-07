@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjectPSD.Handler;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -43,6 +44,25 @@ namespace ProjectPSD.Controller
 
             return response;
         }
+
+        public static string checkPassword(string id, string old_password, string new_password)
+        {
+            string response = "";
+            string password = AuthHandler.getPassword(id);
+            if (old_password == password) {
+                if (new_password.Length < 8 || new_password.Length > 15)
+                {
+                    response = "Password must be between 8 and 15 characters!";
+                    return response;
+                }
+                return response;
+            } else
+            {
+                response = "Old password is incorrect!";
+                return response;
+            }
+        }
+
 
     }
 }
