@@ -1,4 +1,5 @@
-﻿using ProjectPSD.Models;
+﻿using ProjectPSD.Factory;
+using ProjectPSD.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,21 @@ namespace ProjectPSD.Repository
 {
     public class UserRepository
     {
-        ProjectDatabaseEntities3 db = Singleton.GetInstance();
+        static ProjectDatabaseEntities3 db = Singleton.GetInstance();
+
+        public static MsUser createUser(string name, string email, string gender, string role, DateTime dob, string password)
+        {
+            MsUser user = UserFactory.create(name, email, dob, gender, role, password);
+            db.MsUsers.Add(user);
+            db.SaveChanges();
+            return user;
+        }
+
+        public static MsUser getUser(string name, string password)
+        {
+            return (from user in db.MsUsers
+                    where user.UserName.Equals(name) && user.UserPassword.Equals(password)
+                    select user).FirstOrDefault();
+        }
     }
 }

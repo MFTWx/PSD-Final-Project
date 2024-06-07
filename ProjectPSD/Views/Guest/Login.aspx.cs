@@ -1,4 +1,7 @@
-﻿using System;
+﻿using ProjectPSD.Controller;
+using ProjectPSD.Handler;
+using ProjectPSD.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -14,9 +17,42 @@ namespace ProjectPSD.Views
 
         }
 
-        protected void btnLogin_Click(object sender, EventArgs e)
+        protected void login_button_Click(object sender, EventArgs e)
         {
+            string username = username_txt.Text;
+            string password = password_txt.Text;
+            bool rememberMe = remember_me_checkbox.Checked;
 
+            string response = AuthController.checkLogin(username, password);
+
+            if (response == "")
+            {
+                MsUser user = AuthHandler.doLogin(username, password);
+                
+
+                if(user == null)
+                {
+                    error_lbl.Text = "Login failed!";
+                }
+                else
+                {
+                    Session["user"] = user;
+
+                    if (rememberMe)
+                    {
+                        HttpCookie cookie = new HttpCookie("user_cookie");
+                        cookie.Value = user.UserID.ToString();
+                        cookie.Expires = DateTime.Now.AddHours(1);
+                        Response.Cookies.Add(cookie);
+                    }
+
+                    Response.Write("Login Succesful!");
+                }
+            }
+            else
+            {
+                error_lbl.Text = response;
+            }
         }
     }
 }

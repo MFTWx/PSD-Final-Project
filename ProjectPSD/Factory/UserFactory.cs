@@ -6,9 +6,9 @@ using System.Web;
 
 namespace ProjectPSD.Factory
 {
-    public class AdminFactory
+    public class UserFactory
     {
-        public static MsUser create(string UserName, string UserEmail, DateTime UserDOB, string UserGender, string UserRole)
+        public static MsUser create(string UserName, string UserEmail, DateTime UserDOB, string UserGender, string UserRole, string UserPassword)
         {
             return new MsUser()
             {
@@ -16,7 +16,8 @@ namespace ProjectPSD.Factory
                 UserEmail = UserEmail,
                 UserDOB = UserDOB,
                 UserGender = UserGender,
-                UserRole = UserRole
+                UserRole = UserRole,
+                UserPassword = UserPassword
             };
         }
     }
