@@ -34,13 +34,19 @@
     <form id="form1" runat="server">
         <div>
             <asp:Label ID="errorlbl" runat="server" Text=""></asp:Label>
-            <asp:GridView ID="GridOrderSupplement" runat="server" AutoGenerateColumns="false">
+            <asp:GridView ID="GridOrderSupplement" runat="server" AutoGenerateColumns="False" >
                 <Columns>
                     <asp:BoundField DataField="SupplementID" HeaderText="ID" SortExpression="SupplementID" />
                     <asp:BoundField DataField="SupplementName" HeaderText="Name" SortExpression="SupplementName" />
                     <asp:BoundField DataField="SupplementExpiryDate" HeaderText="Expiry Date" SortExpression="SupplementExpiryDate" />
                     <asp:BoundField DataField="SupplementPrice" HeaderText="Price" SortExpression="SupplementPrice" />
                     <asp:BoundField DataField="SupplementTypeName" HeaderText="Type Name" SortExpression="SupplementTypeName" />
+                    <asp:TemplateField HeaderText="Quantity">
+                        <ItemTemplate>
+                             <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("Quantity") %>'></asp:TextBox>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                    <asp:ButtonField ButtonType="Button" CommandName="Select" Text="Order" />
                 </Columns>
             </asp:GridView>
         </div>

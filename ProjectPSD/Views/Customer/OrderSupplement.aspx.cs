@@ -19,12 +19,13 @@ namespace ProjectPSD.Views.Customer
             {
                 Response<List<MsSupplement>> response = SupplementController.getSupplemets();
                 System.Data.DataTable dt = new System.Data.DataTable();
-                dt.Columns.AddRange(new System.Data.DataColumn[5] {
+                dt.Columns.AddRange(new System.Data.DataColumn[6] {
                 new System.Data.DataColumn("SupplementID"),
                 new System.Data.DataColumn("SupplementName"),
                 new System.Data.DataColumn("SupplementExpiryDate"),
                 new System.Data.DataColumn("SupplementPrice"),
-                new System.Data.DataColumn("SupplementTypeName")});
+                new System.Data.DataColumn("SupplementTypeName"),
+                new System.Data.DataColumn("Quantity")});
 
                 if (response.Success == true)
                 {
@@ -32,7 +33,7 @@ namespace ProjectPSD.Views.Customer
                     for (int i = 0; i < count; i++)
                     {
                         Response<MsSupplementType> typename = SupplementController.getSupplementType(response.Payload[i].SupplementTypeID);
-                        dt.Rows.Add(response.Payload[i].SupplementID, response.Payload[i].SupplementName, response.Payload[i].SupplementExpiryDate.Date.ToShortDateString(), response.Payload[i].SupplementPrice, typename.Payload.SupplementTypeName);
+                        dt.Rows.Add(response.Payload[i].SupplementID, response.Payload[i].SupplementName, response.Payload[i].SupplementExpiryDate.Date.ToShortDateString(), response.Payload[i].SupplementPrice, typename.Payload.SupplementTypeName, "");
                     }
                     GridOrderSupplement.DataSource = dt;
                     GridOrderSupplement.DataBind();
