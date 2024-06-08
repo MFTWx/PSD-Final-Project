@@ -27,12 +27,31 @@ namespace ProjectPSD.Repository
                     select user).FirstOrDefault();
         }
 
+        public static MsUser getUserById(string id)
+        {
+            return (from user in db.MsUsers
+                    where user.UserID.ToString().Equals(id)
+                    select user).FirstOrDefault();
+        }
+
         public static string getPassword(string id)
         {
             string password = (from user in db.MsUsers
                                where user.UserID.ToString().Equals(id)
                                select user.UserPassword).FirstOrDefault();
             return password;
+        }
+
+        public static void editUser(string id, string name, string email, string gender, DateTime dob)
+        {
+            MsUser user = getUserById(id);
+
+            user.UserName = name;
+            user.UserEmail = email;
+            user.UserGender = gender;
+            user.UserDOB = dob;
+
+            db.SaveChanges();
         }
 
         public static MsUser updatePassword(string id, string newPassword)
