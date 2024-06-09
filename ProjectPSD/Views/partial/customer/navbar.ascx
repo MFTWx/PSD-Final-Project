@@ -16,7 +16,7 @@
             <a class="nav-link mx-2 active" href="History.aspx">History</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link mx-2 active" href="../../Customer/CustomerProfile.aspx">Profile</a>
+            <a class="nav-link mx-2 active" href="../Customer/CustomerProfile.aspx">Profile</a>
           </li>
           <li>
             <asp:Button ID="logout"  class="btn btn-outline-danger" runat="server" Text="Logout" OnClick="logout_Click" />

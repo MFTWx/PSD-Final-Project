@@ -19,7 +19,7 @@
             <a class="nav-link mx-2 active" href="#">Order Queue</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link mx-2 active" href="../../Admin/AdminProfile.aspx">Profile</a>
+            <a class="nav-link mx-2 active" href="../Admin/AdminProfile.aspx">Profile</a>
           </li>
             <li class="nav-item">
               <a class="nav-link mx-2 active" href="#">Transaction Report</a>

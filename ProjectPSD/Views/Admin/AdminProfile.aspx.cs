@@ -89,7 +89,7 @@ namespace ProjectPSD.Views.Admin
                 }
 
                 AuthHandler.doUpdateUser(userId, old_name, old_email, old_gender, old_dob);
-                Response.Redirect("CustomerProfile.aspx");
+                Response.Redirect("AdminProfile.aspx");
 
             }
             else

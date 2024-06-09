@@ -21,6 +21,5 @@ namespace ProjectPSD.Views.partial
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        
     }
 }
