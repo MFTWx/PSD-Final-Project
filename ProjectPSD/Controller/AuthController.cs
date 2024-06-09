@@ -1,8 +1,10 @@
 ﻿using ProjectPSD.Handler;
+using ProjectPSD.Modules;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Xml.Linq;
 
 namespace ProjectPSD.Controller
 {
@@ -45,11 +47,30 @@ namespace ProjectPSD.Controller
             return response;
         }
 
+        public static string checkUpdate(string name, string email, string gender, string birthdayString)
+        {
+            string response = "";
+
+            if (email == "" ||  name == "" || string.IsNullOrEmpty(birthdayString) || gender == "")
+            {
+                response = "All fields must be filled!";
+            }
+
+            return response;
+
+        }
+
         public static string checkPassword(string id, string old_password, string new_password)
         {
             string response = "";
             string password = AuthHandler.getPassword(id);
-            if (old_password == password) {
+
+            if(old_password == "" || new_password == "")
+            {
+                response = "All fields must be filled!";
+                return response;
+            }
+            else if (old_password == password) {
                 if (new_password.Length < 8 || new_password.Length > 15)
                 {
                     response = "Password must be between 8 and 15 characters!";

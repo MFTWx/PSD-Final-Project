@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="navbar.ascx.cs" Inherits="ProjectPSD.Views.partial.header1" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="navbarAdmin.ascx.cs" Inherits="ProjectPSD.Views.partial.header1" %>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3 sticky-top">
     <div class="container-fluid">
@@ -9,15 +9,21 @@
     
       <div class=" collapse navbar-collapse sticky-top" id="navbarNavDropdown">
         <ul class="navbar-nav ms-auto ">
+            <li class="nav-item">
+              <a class="nav-link mx-2 active" href="#">Home</a>
+            </li>
           <li class="nav-item">
-            <a class="nav-link mx-2 active" href="OrderSupplement.aspx">Order Supplement</a>
+            <a class="nav-link mx-2 active" href="#">Manage Supplement</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link mx-2 active" href="History.aspx">History</a>
+            <a class="nav-link mx-2 active" href="#">Order Queue</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link mx-2 active" href="../../Customer/CustomerProfile.aspx">Profile</a>
+            <a class="nav-link mx-2 active" href="../../Admin/AdminProfile.aspx">Profile</a>
           </li>
+            <li class="nav-item">
+              <a class="nav-link mx-2 active" href="#">Transaction Report</a>
+            </li>
           <li>
             <asp:Button ID="logout"  class="btn btn-outline-danger" runat="server" Text="Logout" OnClick="logout_Click" />
           </li>

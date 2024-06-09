@@ -37,11 +37,25 @@ namespace ProjectPSD.Handler
 
         }
 
+        public static MsUser getUserById(string id)
+        {
+            MsUser user = UserRepository.getUserById(id);
+            return user;
+        }
+
         public static string getPassword(string id)
         {
             string password = UserRepository.getPassword(id);
             return password;
             
+        }
+
+        public static void doUpdateUser(string id, string name, string email, string gender, string dob)
+        {
+            DateTime birthday = DateTime.Parse(dob);
+            string emailfix = email.ToLower();
+            UserRepository.editUser(id, name, email, gender, birthday);
+
         }
 
         public static void doPasswordReset(string id, string newPassword)

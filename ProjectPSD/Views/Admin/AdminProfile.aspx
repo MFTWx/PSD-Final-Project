@@ -1,9 +1,9 @@
-﻿<%@ Page Title="User Profile" Language="C#" MasterPageFile="~/Views/partial/BaseUser.Master" AutoEventWireup="true" CodeBehind="CustomerProfile.aspx.cs" Inherits="ProjectPSD.Views.Customer.customer_profile" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/partial/BaseAdmin.Master" AutoEventWireup="true" CodeBehind="AdminProfile.aspx.cs" Inherits="ProjectPSD.Views.Admin.AdminProfile" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<style>
+    <style>
     .full-height {
         height: 100vh;
     }

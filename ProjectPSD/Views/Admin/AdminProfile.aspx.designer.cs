@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ProjectPSD.Views.Customer
+namespace ProjectPSD.Views.Admin
 {
 
 
-    public partial class customer_profile
+    public partial class AdminProfile
     {
 
         /// <summary>

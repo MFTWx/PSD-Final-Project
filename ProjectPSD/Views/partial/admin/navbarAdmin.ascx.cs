@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace ProjectPSD.Views.partial
 {
-    public partial class header1 : System.Web.UI.UserControl
+    public partial class headerAdmin : System.Web.UI.UserControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {
