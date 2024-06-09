@@ -51,7 +51,7 @@ namespace ProjectPSD.Views
                     {
                         Response.Redirect("../Admin/AdminProfile.aspx");
                     }
-                    else if(user.UserRole == "Customer")
+                    else if(user.UserRole == "user")
                     {
                         Response.Redirect("../Customer/OrderSupplement.aspx");
                     }
