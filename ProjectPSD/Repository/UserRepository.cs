@@ -20,6 +20,11 @@ namespace ProjectPSD.Repository
             return user;
         }
 
+        public static List<MsUser> getAllCustomer()
+        {
+           return (from user in db.MsUsers where user.UserRole.Equals("user") select user).ToList();
+        }
+
         public static MsUser getUser(string name, string password)
         {
             return (from user in db.MsUsers
