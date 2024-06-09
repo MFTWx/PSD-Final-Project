@@ -16,5 +16,16 @@
                 <asp:BoundField DataField="quantity" HeaderText="Quantity" SortExpression="quantity" />
             </Columns>
         </asp:GridView>
+        <asp:GridView ID="GridAdmin" runat="server" AutoGenerateColumns="False" CellPadding="5">
+            <Columns>
+                <asp:BoundField DataField="TransactionDate" DataFormatString="{0:dd/MM/yyyy}" HeaderText="Transaction Date" SortExpression="TransactionDate" />
+                <asp:BoundField DataField="UserID" HeaderText="User ID" SortExpression="UserID" />
+                <asp:BoundField DataField="SupplementName" HeaderText="Supplement Name" SortExpression="SupplementName" />
+                <asp:BoundField DataField="SupplementExpiryDate" DataFormatString="{0:dd/MM/yyyy}" HeaderText="Expiry Date" SortExpression="SupplementExpiryDate" />
+                <asp:BoundField DataField="SupplementPrice" HeaderText="Price" SortExpression="SupplementPrice" />
+                <asp:BoundField DataField="SupplementTypeName" HeaderText="Supplement Type" SortExpression="SupplementTypeName" />
+                <asp:BoundField DataField="quantity" HeaderText="Quantity" SortExpression="quantity" />
+            </Columns>
+        </asp:GridView>
     </div>
 </asp:Content>

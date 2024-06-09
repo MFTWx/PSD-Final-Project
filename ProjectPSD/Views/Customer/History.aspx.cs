@@ -27,14 +27,26 @@ namespace ProjectPSD.Views.Customer
                 temp = cookie.Value;
             }
 
+            MsUser userSession = AuthHandler.getUserById(temp);
             int UserID = AuthHandler.getUserID(temp);
 
-            Response<List<TransactionHeader>> headers = TransactionsHandler.GetTransactionCustomer(UserID);
-
-            if(headers.Success == true)
+            if (userSession.UserRole == "user")
             {
-                GridHistory.DataSource = headers.Payload;
-                GridHistory.DataBind();
+                Response<List<TransactionHeader>> headers = TransactionsHandler.GetTransactionCustomer(UserID);
+                if (headers.Success == true)
+                {
+                    GridHistory.DataSource = headers.Payload;
+                    GridHistory.DataBind();
+                }
+            }
+            else
+            {
+                Response<List<TransactionHeader>> headers = TransactionsHandler.GetAllTransactionHeaders();
+                if (headers.Success == true)
+                {
+                    GridHistory.DataSource = headers.Payload;
+                    GridHistory.DataBind();
+                }
             }
         }
 

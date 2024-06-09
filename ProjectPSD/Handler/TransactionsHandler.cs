@@ -41,8 +41,8 @@ namespace ProjectPSD.Handler
 
         public static Response<List<TransactionHeader>> GetTransactionCustomer(int UserID)
         {
-            List<TransactionHeader> transactionHeaders = TransactionRepository.GetTransactionHeadersCustomer(UserID);   
-            if(transactionHeaders.Count > 0)
+            List<TransactionHeader> transactionHeaders = TransactionRepository.GetTransactionHeadersCustomer(UserID);
+            if (transactionHeaders.Count > 0)
             {
                 return new Response<List<TransactionHeader>>()
                 {
@@ -55,7 +55,7 @@ namespace ProjectPSD.Handler
             {
                 return new Response<List<TransactionHeader>>()
                 {
-                    Success =  false,
+                    Success = false,
                     Message = "Failed",
                     Payload = null
                 };
@@ -87,8 +87,8 @@ namespace ProjectPSD.Handler
 
         public static Response<TransactionHeader> GetTransactionHeaderByID(int TransactionID)
         {
-            TransactionHeader header = TransactionRepository.getTransactionHeaderByID(TransactionID);  
-            if(header != null)
+            TransactionHeader header = TransactionRepository.getTransactionHeaderByID(TransactionID);
+            if (header != null)
             {
                 return new Response<TransactionHeader>()
                 {
@@ -103,6 +103,30 @@ namespace ProjectPSD.Handler
                 {
                     Success = false,
                     Message = "not found",
+                    Payload = null
+                };
+            }
+        }
+
+        public static Response<List<TransactionHeader>> GetAllTransactionHeaders()
+        {
+            List<TransactionHeader> headers = TransactionRepository.GetAllTransactionHeaders();
+
+            if (headers != null)
+            {
+                return new Response<List<TransactionHeader>>()
+                {
+                    Success = true,
+                    Message = "Successfully get all transaction headers",
+                    Payload = headers
+                };
+            }
+            else
+            {
+                return new Response<List<TransactionHeader>>()
+                {
+                    Success = false,
+                    Message = "Unsuccessfull",
                     Payload = null
                 };
             }

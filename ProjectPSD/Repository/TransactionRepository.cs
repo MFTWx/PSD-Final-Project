@@ -26,7 +26,7 @@ namespace ProjectPSD.Repository
 
         public static List<TransactionHeader> GetTransactionHeadersCustomer(int UserID)
         {
-            List<TransactionHeader> headers = (from c in db.TransactionHeaders where c.UserID == UserID select c).ToList(); 
+            List<TransactionHeader> headers = (from c in db.TransactionHeaders where c.UserID == UserID select c).ToList();
             return headers;
         }
 
@@ -39,6 +39,11 @@ namespace ProjectPSD.Repository
         public static TransactionHeader getTransactionHeaderByID(int TransactionID)
         {
             return db.TransactionHeaders.Find(TransactionID);
+        }
+
+        public static List<TransactionHeader> GetAllTransactionHeaders()
+        {
+            return db.TransactionHeaders.ToList();
         }
     }
 }
