@@ -38,17 +38,14 @@
     <Property Name="UserRole" Type="varchar" MaxLength="10" Nullable="false" />
     <Property Name="UserPassword" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view '9075C83F7235FB0798C3BEF009AB6A5B_TTERN SOFTWARE DESIGN LAB\FINAL-PROJECT\FINAPROJECT-PSD\PROJECTPSD\APP_DATA\PROJECTDATABASE.MDF.dbo.TransactionDetail' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="TransactionDetail">
     <Key>
-      <PropertyRef Name="TransactionID" />
-      <PropertyRef Name="SupplementID" />
-      <PropertyRef Name="Quantity" />
+      <PropertyRef Name="DetailID" />
     </Key>
     <Property Name="TransactionID" Type="int" Nullable="false" />
     <Property Name="SupplementID" Type="int" Nullable="false" />
     <Property Name="Quantity" Type="int" Nullable="false" />
+    <Property Name="DetailID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
   </EntityType>
   <EntityType Name="TransactionHeader">
     <Key>
@@ -136,14 +133,8 @@ warning 6002: The table/view '9075C83F7235FB0798C3BEF009AB6A5B_TTERN SOFTWARE DE
     <EntitySet Name="MsSupplement" EntityType="Self.MsSupplement" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="MsSupplementType" EntityType="Self.MsSupplementType" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="MsUser" EntityType="Self.MsUser" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TransactionDetail" EntityType="Self.TransactionDetail" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TransactionHeader" EntityType="Self.TransactionHeader" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="TransactionDetail" EntityType="Self.TransactionDetail" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [TransactionDetail].[TransactionID] AS [TransactionID], 
-    [TransactionDetail].[SupplementID] AS [SupplementID], 
-    [TransactionDetail].[Quantity] AS [Quantity]
-    FROM [dbo].[TransactionDetail] AS [TransactionDetail]</DefiningQuery>
-    </EntitySet>
     <AssociationSet Name="FK_MsCart_ToMsSupplement" Association="Self.FK_MsCart_ToMsSupplement">
       <End Role="MsSupplement" EntitySet="MsSupplement" />
       <End Role="MsCart" EntitySet="MsCart" />

@@ -114,6 +114,8 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Views\Admin\AdminProfile.aspx" />
     <Content Include="Views\Customer\CustomerProfile.aspx" />
+    <Content Include="Views\Customer\Detail.aspx" />
+    <Content Include="Views\Customer\History.aspx" />
     <Content Include="Views\Customer\OrderSupplement.aspx" />
     <Content Include="Views\Guest\Login.aspx" />
     <Content Include="Views\Guest\Register.aspx" />
@@ -124,16 +126,20 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\CartController.cs" />
     <Compile Include="Controller\SupplementController.cs" />
     <Compile Include="Controller\AuthController.cs" />
+    <Compile Include="Controller\TransactionController.cs" />
     <Compile Include="Factory\UserFactory.cs" />
     <Compile Include="Factory\CartFactory.cs" />
     <Compile Include="Factory\DetailFactory.cs" />
     <Compile Include="Factory\HeaderFactory.cs" />
     <Compile Include="Factory\MsSupplementFactory.cs" />
     <Compile Include="Factory\SupplementTypeFactory.cs" />
+    <Compile Include="Handler\CartHandler.cs" />
     <Compile Include="Handler\SupplementHandler.cs" />
     <Compile Include="Handler\AuthHandler.cs" />
+    <Compile Include="Handler\TransactionsHandler.cs" />
     <Compile Include="Models\Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -169,8 +175,10 @@
     </Compile>
     <Compile Include="Modules\Response.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\CartRepository.cs" />
     <Compile Include="Repository\Singleton.cs" />
     <Compile Include="Repository\SupplementRepository.cs" />
+    <Compile Include="Repository\TransactionRepository.cs" />
     <Compile Include="Repository\UserRepository.cs" />
     <Compile Include="Views\Admin\AdminProfile.aspx.cs">
       <DependentUpon>AdminProfile.aspx</DependentUpon>
@@ -185,6 +193,20 @@
     </Compile>
     <Compile Include="Views\Customer\CustomerProfile.aspx.designer.cs">
       <DependentUpon>CustomerProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Customer\Detail.aspx.cs">
+      <DependentUpon>Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Customer\Detail.aspx.designer.cs">
+      <DependentUpon>Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Customer\History.aspx.cs">
+      <DependentUpon>History.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Customer\History.aspx.designer.cs">
+      <DependentUpon>History.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Customer\OrderSupplement.aspx.cs">
       <DependentUpon>OrderSupplement.aspx</DependentUpon>

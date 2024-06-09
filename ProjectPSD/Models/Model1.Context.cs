@@ -29,7 +29,7 @@ namespace ProjectPSD.Models
         public virtual DbSet<MsSupplement> MsSupplements { get; set; }
         public virtual DbSet<MsSupplementType> MsSupplementTypes { get; set; }
         public virtual DbSet<MsUser> MsUsers { get; set; }
-        public virtual DbSet<TransactionHeader> TransactionHeaders { get; set; }
         public virtual DbSet<TransactionDetail> TransactionDetails { get; set; }
+        public virtual DbSet<TransactionHeader> TransactionHeaders { get; set; }
     }
 }

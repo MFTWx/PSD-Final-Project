@@ -10,10 +10,10 @@
       <div class=" collapse navbar-collapse sticky-top" id="navbarNavDropdown">
         <ul class="navbar-nav ms-auto ">
           <li class="nav-item">
-            <a class="nav-link mx-2 active" href="#">Order Supplement</a>
+            <a class="nav-link mx-2 active" href="OrderSupplement.aspx">Order Supplement</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link mx-2 active" href="#">History</a>
+            <a class="nav-link mx-2 active" href="History.aspx">History</a>
           </li>
           <li class="nav-item">
             <a class="nav-link mx-2 active" href="../../Customer/CustomerProfile.aspx">Profile</a>

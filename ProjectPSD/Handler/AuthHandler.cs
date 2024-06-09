@@ -31,7 +31,7 @@ namespace ProjectPSD.Handler
         public static MsUser doLogin(string name, string password)
         {
 
-           MsUser user = UserRepository.getUser(name, password);
+            MsUser user = UserRepository.getUser(name, password);
 
             return user;
 
@@ -61,6 +61,11 @@ namespace ProjectPSD.Handler
         public static void doPasswordReset(string id, string newPassword)
         {
             UserRepository.updatePassword(id, newPassword);
+        }
+
+        public static int getUserID(string id)
+        {
+            return UserRepository.getUserID(id);
         }
     }
 }

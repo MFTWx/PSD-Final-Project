@@ -15,15 +15,6 @@ namespace ProjectPSD.Views.Customer
     {
 
         /// <summary>
-        /// form1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-
-        /// <summary>
         /// errorlbl control.
         /// </summary>
         /// <remarks>
@@ -33,6 +24,15 @@ namespace ProjectPSD.Views.Customer
         protected global::System.Web.UI.WebControls.Label errorlbl;
 
         /// <summary>
+        /// orderlbl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label orderlbl;
+
+        /// <summary>
         /// GridOrderSupplement control.
         /// </summary>
         /// <remarks>
@@ -40,5 +40,41 @@ namespace ProjectPSD.Views.Customer
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView GridOrderSupplement;
+
+        /// <summary>
+        /// cartlbl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label cartlbl;
+
+        /// <summary>
+        /// GridCart control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridCart;
+
+        /// <summary>
+        /// BtnClear control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnClear;
+
+        /// <summary>
+        /// BtnCheckout control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnCheckout;
     }
 }
