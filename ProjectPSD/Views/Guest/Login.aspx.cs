@@ -47,7 +47,14 @@ namespace ProjectPSD.Views
                         Response.Cookies.Add(cookie);
                     }
 
-                    Response.Redirect("../Customer/CustomerProfile.aspx");
+                    if(user.UserRole == "admin")
+                        Response.Redirect("../Admin/AdminProfile.aspx");
+                    else
+                    {
+                        Response.Redirect("../Customer/CustomerProfile.aspx");
+                    }
+
+                    
                 }
             }
             else
