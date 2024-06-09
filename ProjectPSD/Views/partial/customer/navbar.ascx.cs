@@ -14,11 +14,6 @@ namespace ProjectPSD.Views.partial
 
         }
 
-        protected void logout_button_Click(object sender, EventArgs e)
-        {
-
-        }
-
         protected void logout_Click(object sender, EventArgs e)
         {
             Session.Clear();
