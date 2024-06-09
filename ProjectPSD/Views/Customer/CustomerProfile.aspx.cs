@@ -22,10 +22,12 @@ namespace ProjectPSD.Views.Customer
         {
             HttpCookie cookie = Request.Cookies["user_cookie"];
             string userId = "";
+
             if(cookie == null)
             {
                 var user = Session["user"] as MsUser;
                 userId = user.UserID.ToString();
+
             } else
             {
                 userId = cookie.Value;

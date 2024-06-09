@@ -17,6 +17,7 @@ namespace ProjectPSD.Models
         public int TransactionID { get; set; }
         public int SupplementID { get; set; }
         public int Quantity { get; set; }
+        public int DetailID { get; set; }
     
         public virtual MsSupplement MsSupplement { get; set; }
         public virtual TransactionHeader TransactionHeader { get; set; }

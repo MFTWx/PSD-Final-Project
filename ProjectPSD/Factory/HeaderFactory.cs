@@ -8,12 +8,12 @@ namespace ProjectPSD.Factory
 {
     public class HeaderFactory
     {
-        public static TransactionHeader create(int UserID, DateTime date, string status)
+        public static TransactionHeader create(int UserID, string status)
         {
             return new TransactionHeader()
             {
                 UserID = UserID,
-                TransactionDate = date,
+                TransactionDate = DateTime.Now,
                 Status = status
             };
         }

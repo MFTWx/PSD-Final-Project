@@ -56,5 +56,29 @@ namespace ProjectPSD.Handler
                 };
             }
         }
+
+        public static Response<MsSupplement> GetSupplementByID(int id)
+        {
+            MsSupplement Supplement = SupplementRepository.GetSupplementByID(id);
+
+            if(Supplement == null)
+            {
+                return new Response<MsSupplement>()
+                {
+                    Success = false,
+                    Message = "Cannot find Supplement!",
+                    Payload = null
+                };
+            }
+            else
+            {
+                return new Response<MsSupplement>()
+                {
+                    Success = true,
+                    Message = "Supplement Found",
+                    Payload = Supplement
+                };
+            }
+        }
     }
 }

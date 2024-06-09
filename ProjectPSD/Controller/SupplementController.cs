@@ -21,5 +21,11 @@ namespace ProjectPSD.Controller
             Response<MsSupplementType> response = SupplementHandler.GetSupplementType(key);
             return response;
         }
+
+        public static Response<MsSupplement> getSupplementByID(int key)
+        {
+            Response<MsSupplement> response = SupplementHandler.GetSupplementByID(key);
+            return response;
+        }
     }
 }

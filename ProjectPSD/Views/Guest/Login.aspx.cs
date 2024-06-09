@@ -47,7 +47,7 @@ namespace ProjectPSD.Views
                         Response.Cookies.Add(cookie);
                     }
 
-                    Response.Redirect("../Customer/CustomerProfile.aspx");
+                    Response.Redirect("../Customer/OrderSupplement.aspx");
                 }
             }
             else

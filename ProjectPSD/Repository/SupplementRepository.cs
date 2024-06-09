@@ -20,5 +20,10 @@ namespace ProjectPSD.Repository
             MsSupplementType toFind = (from c in db.MsSupplementTypes where c.SupplementTypeID == key select c).ToList().FirstOrDefault();
             return toFind;
         }
+
+        public static MsSupplement GetSupplementByID(int id)
+        {
+            return (from c in db.MsSupplements where c.SupplementID == id select c).FirstOrDefault();
+        }
     }
 }

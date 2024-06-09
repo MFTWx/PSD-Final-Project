@@ -27,6 +27,13 @@ namespace ProjectPSD.Repository
                     select user).FirstOrDefault();
         }
 
+        public static int getUserID(string UserID)
+        {
+            int temp = Convert.ToInt32(UserID);
+            return (from user in db.MsUsers where user.UserID == temp select user.UserID).FirstOrDefault();
+            
+        }
+
         public static string getPassword(string id)
         {
             string password = (from user in db.MsUsers
