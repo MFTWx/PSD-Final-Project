@@ -67,5 +67,10 @@ namespace ProjectPSD.Handler
         {
             return UserRepository.getUserID(id);
         }
+
+        public static List<MsUser> getAllCustomer()
+        {
+            return UserRepository.getAllCustomer();
+        }
     }
 }

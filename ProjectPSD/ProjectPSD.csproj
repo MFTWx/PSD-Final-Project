@@ -113,6 +113,7 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Views\Admin\AdminProfile.aspx" />
+    <Content Include="Views\Admin\Home.aspx" />
     <Content Include="Views\Customer\CustomerProfile.aspx" />
     <Content Include="Views\Customer\Detail.aspx" />
     <Content Include="Views\Customer\History.aspx" />
@@ -186,6 +187,13 @@
     </Compile>
     <Compile Include="Views\Admin\AdminProfile.aspx.designer.cs">
       <DependentUpon>AdminProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Customer\CustomerProfile.aspx.cs">
       <DependentUpon>CustomerProfile.aspx</DependentUpon>

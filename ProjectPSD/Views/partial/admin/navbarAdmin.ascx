@@ -10,7 +10,7 @@
       <div class=" collapse navbar-collapse sticky-top" id="navbarNavDropdown">
         <ul class="navbar-nav ms-auto ">
             <li class="nav-item">
-              <a class="nav-link mx-2 active" href="#">Home</a>
+              <a class="nav-link mx-2 active" href="../Admin/Home.aspx">Home</a>
             </li>
           <li class="nav-item">
             <a class="nav-link mx-2 active" href="#">Manage Supplement</a>

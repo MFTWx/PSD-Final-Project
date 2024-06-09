@@ -49,7 +49,7 @@ namespace ProjectPSD.Views
 
                     if(user.UserRole == "admin")
                     {
-                        Response.Redirect("../Admin/AdminProfile.aspx");
+                        Response.Redirect("../Admin/Home.aspx");
                     }
                     else if(user.UserRole == "user")
                     {
