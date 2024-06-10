@@ -141,7 +141,7 @@ namespace ProjectPSD.Handler
                 return new Response<TransactionHeader>()
                 {
                     Success = true,
-                    Message = "Status successfully found",
+                    Message = "Status successfully changed",
                     Payload = header
                 };
             }
