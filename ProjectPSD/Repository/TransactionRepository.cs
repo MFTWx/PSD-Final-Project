@@ -45,5 +45,15 @@ namespace ProjectPSD.Repository
         {
             return db.TransactionHeaders.ToList();
         }
+        public static List<TransactionDetail> DeleteTransactionDetailBySupplementID(MsSupplement supplement)
+        {
+            List<TransactionDetail> details = (from c in db.TransactionDetails where c.SupplementID == supplement.SupplementID select c).ToList();
+            foreach(TransactionDetail detail in details)
+            {
+                db.TransactionDetails.Remove(detail);
+            }
+            db.SaveChanges();
+            return details;
+        }
     }
 }

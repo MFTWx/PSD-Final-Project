@@ -40,5 +40,17 @@ namespace ProjectPSD.Repository
             db.MsCarts.Remove(cart);
             db.SaveChanges();
         }
+
+        public static List<MsCart> removeCartBySupplementID(MsSupplement supplement)
+        {
+            List<MsCart> carts = (from c in db.MsCarts where c.SupplementID == supplement.SupplementID select c).ToList();
+
+            foreach(MsCart cart in carts)
+            {
+                removeCart(cart);
+            }
+            db.SaveChanges();
+            return carts;
+        }
     }
 }
