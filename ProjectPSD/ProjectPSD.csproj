@@ -114,6 +114,9 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Views\Admin\AdminProfile.aspx" />
     <Content Include="Views\Admin\Home.aspx" />
+    <Content Include="Views\Admin\InsertSupplement.aspx" />
+    <Content Include="Views\Admin\ManageSupplement.aspx" />
+    <Content Include="Views\Admin\UpdateSupplement.aspx" />
     <Content Include="Views\Customer\CustomerProfile.aspx" />
     <Content Include="Views\Customer\Detail.aspx" />
     <Content Include="Views\Customer\History.aspx" />
@@ -194,6 +197,27 @@
     </Compile>
     <Compile Include="Views\Admin\Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\InsertSupplement.aspx.cs">
+      <DependentUpon>InsertSupplement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\InsertSupplement.aspx.designer.cs">
+      <DependentUpon>InsertSupplement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\ManageSupplement.aspx.cs">
+      <DependentUpon>ManageSupplement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\ManageSupplement.aspx.designer.cs">
+      <DependentUpon>ManageSupplement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\UpdateSupplement.aspx.cs">
+      <DependentUpon>UpdateSupplement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\UpdateSupplement.aspx.designer.cs">
+      <DependentUpon>UpdateSupplement.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Customer\CustomerProfile.aspx.cs">
       <DependentUpon>CustomerProfile.aspx</DependentUpon>

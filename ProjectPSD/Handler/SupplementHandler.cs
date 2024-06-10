@@ -1,4 +1,5 @@
-﻿using ProjectPSD.Models;
+﻿using ProjectPSD.Factory;
+using ProjectPSD.Models;
 using ProjectPSD.Modules;
 using ProjectPSD.Repository;
 using System;
@@ -77,6 +78,68 @@ namespace ProjectPSD.Handler
                     Success = true,
                     Message = "Supplement Found",
                     Payload = Supplement
+                };
+            }
+        }
+
+        public static Response<MsSupplement> CreateSupplement(string name, DateTime expirydate, int price, int typeID)
+        {
+            MsSupplement supplement = MsSupplementFactory.create(name, expirydate, price, typeID);
+            SupplementRepository.CreateSupplement(supplement);
+
+            return new Response<MsSupplement>()
+            {
+                Success = true,
+                Message = "Created Successfully",
+                Payload = supplement
+            };
+        }
+
+        public static Response<MsSupplement> UpdateSupplement(int ID, string name, DateTime expirydate, int price, int typeID)
+        {
+            MsSupplement supplement = SupplementRepository.GetSupplementByID(ID);
+            SupplementRepository.UpdateSupplement(ID, name, expirydate, price, typeID);
+
+            if(supplement != null)
+            {
+                return new Response<MsSupplement>()
+                {
+                    Success = true,
+                    Message = "Successfully Updated",
+                    Payload = supplement
+                };
+            }
+            else
+            {
+                return new Response<MsSupplement>()
+                {
+                    Success = false,
+                    Message = "Cannot find to Be Updated",
+                    Payload = null
+                };
+            }
+        }
+
+        public static Response<MsSupplement> DeleteSupplement(int ID)
+        {
+            MsSupplement supplement = SupplementRepository.DeleteSupplement(ID);
+
+            if(supplement != null)
+            {
+                return new Response<MsSupplement>()
+                {
+                    Success = true,
+                    Message = "Successfully Deleted",
+                    Payload = supplement
+                };
+            } 
+            else
+            {
+                return new Response<MsSupplement>()
+                {
+                    Success = false,
+                    Message = "Unsuccessfull delete",
+                    Payload = null
                 };
             }
         }
