@@ -116,6 +116,7 @@
     <Content Include="Views\Admin\Home.aspx" />
     <Content Include="Views\Admin\InsertSupplement.aspx" />
     <Content Include="Views\Admin\ManageSupplement.aspx" />
+    <Content Include="Views\Admin\OrderQueue.aspx" />
     <Content Include="Views\Admin\UpdateSupplement.aspx" />
     <Content Include="Views\Customer\CustomerProfile.aspx" />
     <Content Include="Views\Customer\Detail.aspx" />
@@ -211,6 +212,13 @@
     </Compile>
     <Compile Include="Views\Admin\ManageSupplement.aspx.designer.cs">
       <DependentUpon>ManageSupplement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\OrderQueue.aspx.cs">
+      <DependentUpon>OrderQueue.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\OrderQueue.aspx.designer.cs">
+      <DependentUpon>OrderQueue.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Admin\UpdateSupplement.aspx.cs">
       <DependentUpon>UpdateSupplement.aspx</DependentUpon>

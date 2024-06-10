@@ -55,5 +55,22 @@ namespace ProjectPSD.Repository
             db.SaveChanges();
             return details;
         }
+        public static TransactionHeader changeStatus(int TransactionID)
+        {
+
+            TransactionHeader header = db.TransactionHeaders.Find(TransactionID);
+            if (header.Status == "Unhandled")
+            {
+                header.Status = "Handled";
+            }
+            else
+            {
+                header.Status = "Unhandled";
+            }
+            db.SaveChanges();
+            
+            return header;
+
+        }
     }
 }

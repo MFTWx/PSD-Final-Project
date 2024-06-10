@@ -16,7 +16,7 @@
             <a class="nav-link mx-2 active" href="../Admin/ManageSupplement.aspx">Manage Supplement</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link mx-2 active" href="#">Order Queue</a>
+            <a class="nav-link mx-2 active" href="../Admin/OrderQueue.aspx">Order Queue</a>
           </li>
           <li class="nav-item">
             <a class="nav-link mx-2 active" href="../Admin/AdminProfile.aspx">Profile</a>

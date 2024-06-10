@@ -131,5 +131,29 @@ namespace ProjectPSD.Handler
                 };
             }
         }
+
+        public static Response<TransactionHeader> changeStatus(int TransactionID)
+        {
+            TransactionHeader header = TransactionRepository.changeStatus(TransactionID);
+
+            if (header != null)
+            {
+                return new Response<TransactionHeader>()
+                {
+                    Success = true,
+                    Message = "Status successfully found",
+                    Payload = header
+                };
+            }
+            else
+            {
+                return new Response<TransactionHeader>()
+                {
+                    Success = false,
+                    Message = "not found",
+                    Payload = null
+                };
+            }
+        }
     }
 }
