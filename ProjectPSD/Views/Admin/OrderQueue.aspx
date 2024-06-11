@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/partial/BaseAdmin.Master" AutoEventWireup="true" CodeBehind="OrderQueue.aspx.cs" Inherits="ProjectPSD.Views.Admin.OrderQueue" %>
+﻿<%@ Page Title="Order Queue" Language="C#" MasterPageFile="~/Views/partial/BaseAdmin.Master" AutoEventWireup="true" CodeBehind="OrderQueue.aspx.cs" Inherits="ProjectPSD.Views.Admin.OrderQueue" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">

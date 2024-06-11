@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/partial/BaseAdmin.Master" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="ProjectPSD.Views.Admin.Home" %>
+﻿<%@ Page Title="Home" Language="C#" MasterPageFile="~/Views/partial/BaseAdmin.Master" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="ProjectPSD.Views.Admin.Home" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 

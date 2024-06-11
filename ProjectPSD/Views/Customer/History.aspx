@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/partial/BaseUser.Master" AutoEventWireup="true" CodeBehind="History.aspx.cs" Inherits="ProjectPSD.Views.Customer.History" %>
+﻿<%@ Page Title="History" Language="C#" MasterPageFile="~/Views/partial/BaseUser.Master" AutoEventWireup="true" CodeBehind="History.aspx.cs" Inherits="ProjectPSD.Views.Customer.History" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
