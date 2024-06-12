@@ -1262,6 +1262,7 @@
     <Content Include="Views\partial\admin\navbarAdmin.ascx" />
     <Content Include="Views\partial\customer\footer.ascx" />
     <Content Include="Views\partial\customer\navbar.ascx" />
+    <Content Include="Views\Admin\ReportDemo.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -1463,6 +1464,13 @@
     <Compile Include="Views\partial\customer\navbar.ascx.designer.cs">
       <DependentUpon>navbar.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Views\Admin\ReportDemo.aspx.cs">
+      <DependentUpon>ReportDemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\ReportDemo.aspx.designer.cs">
+      <DependentUpon>ReportDemo.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
@@ -1535,6 +1543,7 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="Report\CrystalReport1.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
