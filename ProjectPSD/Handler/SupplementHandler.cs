@@ -143,5 +143,29 @@ namespace ProjectPSD.Handler
                 };
             }
         }
+
+        public static Response<int> GetSupplementPrice(int supplementID)
+        {
+            int price = SupplementRepository.getSupplementPrice(supplementID);
+
+            if(price == 0)
+            {
+                return new Response<int>()
+                {
+                    Success = false,
+                    Message = "Price Not Found",
+                    Payload = 0
+                };
+            }
+            else
+            {
+                return new Response<int>()
+                {
+                    Success = true,
+                    Message = "Price Found",
+                    Payload = price
+                };
+            }
+        }
     }
 }

@@ -63,5 +63,10 @@ namespace ProjectPSD.Repository
             db.SaveChanges();
             return supplement;
         }
+
+        public static int getSupplementPrice(int supplementID)
+        {
+            return (from c in db.MsSupplements where c.SupplementID == supplementID select c.SupplementPrice).FirstOrDefault();
+        }
     }
 }

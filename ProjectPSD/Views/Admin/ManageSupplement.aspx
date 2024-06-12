@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/partial/BaseAdmin.Master" AutoEventWireup="true" CodeBehind="ManageSupplement.aspx.cs" Inherits="ProjectPSD.Views.Admin.ManageSupplement" %>
+﻿<%@ Page Title="Manage Supplement" Language="C#" MasterPageFile="~/Views/partial/BaseAdmin.Master" AutoEventWireup="true" CodeBehind="ManageSupplement.aspx.cs" Inherits="ProjectPSD.Views.Admin.ManageSupplement" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
